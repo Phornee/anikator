@@ -1,0 +1,211 @@
+animals:
+- name: tigre
+  tags:
+  - mamifero
+  - rayas
+  - carnivoro
+  - felino
+  - cola larga
+- name: leon
+  tags:
+  - mamifero
+  - melena
+  - carnivoro
+  - felino
+  - cola larga
+- name: gamba
+  tags:
+  - crustaceo
+- name: cangrejo
+  tags:
+  - crustaceo
+  - camina de lado
+  - pinzas
+- name: delfin
+  tags:
+  - mamifero
+  - vive en el mar
+- name: ballena
+  tags:
+  - mamifero
+  - vive en el mar
+  - grande
+- name: caballo
+  tags:
+  - mamifero
+  - cola larga
+  - domestico
+- name: cebra
+  tags:
+  - mamifero
+  - rayas
+  - herbivoro
+  - cola larga
+- name: ballena
+  tags:
+  - mamifero
+  - vive en el mar
+  - grande
+- name: ornitorrinco
+  tags:
+  - mamifero
+  - pico
+- name: rana
+  tags:
+  - anfibio
+- name: cocodrilo
+  tags:
+  - reptil
+  - patas
+- name: jirafa
+  tags:
+  - mamifero
+  - cuello largo
+  - cola larga
+- name: perro
+  tags:
+  - mamifero
+  - ladra
+  - domestico
+- name: gato
+  tags:
+  - mamifero
+  - "peque\xF1o"
+  - maulla
+  - felino
+  - cola larga
+  - domestico
+- name: tiburon
+  tags:
+  - pez
+- name: caballito de mar
+  tags:
+  - "peque\xF1o"
+  - pez
+- name: langosta
+  tags:
+  - crustaceo
+  - grande
+- name: pato
+  tags:
+  - ave
+  - nada
+  - pico
+  - vuela
+  - nada
+- name: oveja
+  tags:
+  - mamifero
+  - lana
+  - bala
+  - rumiante
+  - domestico
+- name: cabra
+  tags:
+  - mamifero
+  - cuernos
+  - da leche
+  - bala
+  - rumiante
+  - domestico
+- name: vaca
+  tags:
+  - mamifero
+  - cuernos
+  - da leche
+  - muge
+  - rumiante
+  - cola larga
+  - domestico
+- name: raton
+  tags:
+  - mamifero
+  - "peque\xF1o"
+  - cola larga
+- name: avestruz
+  tags: []
+- name: caracol
+  tags:
+  - molusco
+- name: mariposa
+  tags:
+  - insecto
+  - alas
+- name: humano
+  tags:
+  - mamifero
+  - bipedo
+- name: serpiente
+  tags:
+  - reptil
+- name: conejo
+  tags:
+  - mamifero
+  - orejas largas
+- name: rinoceronte
+  tags:
+  - mamifero
+  - cuernos
+- name: salamandra
+  tags:
+  - anfibio
+  - cola
+- name: pajaro carpintero
+  tags:
+  - ave
+- name: mono
+  tags:
+  - mamifero
+  - cola larga
+  - trepa
+- name: cerdo
+  tags:
+  - mamifero
+  - domestico
+- name: tortuga
+  tags:
+  - reptil
+  - patas
+  - caparazon
+- name: hormiga
+  tags:
+  - insecto
+tags:
+- mamifero
+- crustaceo
+- camina de lado
+- melena
+- anfibio
+- pico
+- grande
+- rayas
+- herbivoro
+- carnivoro
+- vive en el mar
+- reptil
+- cuello largo
+- ladra
+- "peque\xF1o"
+- maulla
+- felino
+- pinzas
+- pez
+- ave
+- lana
+- bala
+- cuernos
+- muge
+- rumiante
+- cola larga
+- domestico
+- vuela
+- molusco
+- insecto
+- bipedo
+- patas
+- orejas largas
+- cola
+- nada
+- trepa
+- caparazon
+- alas
