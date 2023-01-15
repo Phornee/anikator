@@ -1,175 +1,175 @@
 animals:
-- name: tigre
-  tags:
-  - mamifero
-  - rayas
-  - carnivoro
-  - felino
-  - cola larga
-- name: leon
-  tags:
-  - mamifero
-  - melena
-  - carnivoro
-  - felino
-  - cola larga
-- name: gamba
-  tags:
-  - crustaceo
-- name: cangrejo
-  tags:
-  - crustaceo
-  - camina de lado
-  - pinzas
-- name: delfin
-  tags:
-  - mamifero
-  - vive en el mar
-- name: ballena
-  tags:
-  - mamifero
-  - vive en el mar
-  - grande
-- name: caballo
-  tags:
-  - mamifero
-  - cola larga
-  - domestico
-- name: cebra
-  tags:
-  - mamifero
-  - rayas
-  - herbivoro
-  - cola larga
-- name: ballena
-  tags:
-  - mamifero
-  - vive en el mar
-  - grande
-- name: ornitorrinco
-  tags:
-  - mamifero
-  - pico
-- name: rana
-  tags:
-  - anfibio
-- name: cocodrilo
-  tags:
-  - reptil
-  - patas
-- name: jirafa
-  tags:
-  - mamifero
-  - cuello largo
-  - cola larga
-- name: perro
-  tags:
-  - mamifero
-  - ladra
-  - domestico
-- name: gato
-  tags:
-  - mamifero
-  - "peque\xF1o"
-  - maulla
-  - felino
-  - cola larga
-  - domestico
-- name: tiburon
-  tags:
-  - pez
-- name: caballito de mar
-  tags:
-  - "peque\xF1o"
-  - pez
-- name: langosta
-  tags:
-  - crustaceo
-  - grande
-- name: pato
-  tags:
-  - ave
-  - nada
-  - pico
-  - vuela
-  - nada
-- name: oveja
-  tags:
-  - mamifero
-  - lana
-  - bala
-  - rumiante
-  - domestico
-- name: cabra
-  tags:
-  - mamifero
-  - cuernos
-  - da leche
-  - bala
-  - rumiante
-  - domestico
-- name: vaca
-  tags:
-  - mamifero
-  - cuernos
-  - da leche
-  - muge
-  - rumiante
-  - cola larga
-  - domestico
-- name: raton
-  tags:
-  - mamifero
-  - "peque\xF1o"
-  - cola larga
-- name: avestruz
-  tags: []
-- name: caracol
-  tags:
-  - molusco
-- name: mariposa
-  tags:
-  - insecto
-  - alas
-- name: humano
-  tags:
-  - mamifero
-  - bipedo
-- name: serpiente
-  tags:
-  - reptil
-- name: conejo
-  tags:
-  - mamifero
-  - orejas largas
-- name: rinoceronte
-  tags:
-  - mamifero
-  - cuernos
-- name: salamandra
-  tags:
-  - anfibio
-  - cola
-- name: pajaro carpintero
-  tags:
-  - ave
-- name: mono
-  tags:
-  - mamifero
-  - cola larga
-  - trepa
-- name: cerdo
-  tags:
-  - mamifero
-  - domestico
-- name: tortuga
-  tags:
-  - reptil
-  - patas
-  - caparazon
-- name: hormiga
-  tags:
-  - insecto
+  avestruz:
+    tags:
+    - ave
+  ballena:
+    tags:
+    - mamifero
+    - vive en el mar
+    - grande
+  caballito de mar:
+    tags:
+    - pez
+    - "peque\xF1o"
+  caballo:
+    tags:
+    - cola larga
+    - mamifero
+    - domestico
+  cabra:
+    tags:
+    - mamifero
+    - bala
+    - rumiante
+    - cuernos
+    - da leche
+    - domestico
+  cangrejo:
+    tags:
+    - crustaceo
+    - pinzas
+    - camina de lado
+  caracol:
+    tags:
+    - molusco
+  cebra:
+    tags:
+    - cola larga
+    - mamifero
+    - rayas
+    - herbivoro
+  cerdo:
+    tags:
+    - mamifero
+    - domestico
+  cocodrilo:
+    tags:
+    - patas
+    - reptil
+  conejo:
+    tags:
+    - mamifero
+    - orejas largas
+  delfin:
+    tags:
+    - mamifero
+    - vive en el mar
+  gamba:
+    tags:
+    - crustaceo
+  gato:
+    tags:
+    - mamifero
+    - maulla
+    - cola larga
+    - felino
+    - domestico
+    - "peque\xF1o"
+  hormiga:
+    tags:
+    - insecto
+  humano:
+    tags:
+    - mamifero
+    - bipedo
+  jirafa:
+    tags:
+    - cola larga
+    - mamifero
+    - cuello largo
+  koala:
+    tags:
+    - mamifero
+    - trepa
+  langosta:
+    tags:
+    - crustaceo
+    - grande
+  leon:
+    tags:
+    - mamifero
+    - cola larga
+    - felino
+    - melena
+    - carnivoro
+  mariposa:
+    tags:
+    - alas
+    - insecto
+  mono:
+    tags:
+    - cola larga
+    - mamifero
+    - trepa
+  ornitorrinco:
+    tags:
+    - mamifero
+    - pico
+  oveja:
+    tags:
+    - mamifero
+    - bala
+    - rumiante
+    - lana
+    - domestico
+  pajaro carpintero:
+    tags:
+    - ave
+    - vuela
+  pato:
+    tags:
+    - nada
+    - ave
+    - pico
+    - vuela
+  perro:
+    tags:
+    - mamifero
+    - domestico
+    - ladra
+  rana:
+    tags:
+    - anfibio
+  raton:
+    tags:
+    - cola larga
+    - mamifero
+    - "peque\xF1o"
+  rinoceronte:
+    tags:
+    - mamifero
+    - cuernos
+  salamandra:
+    tags:
+    - anfibio
+    - cola
+  serpiente:
+    tags:
+    - reptil
+  tiburon:
+    tags:
+    - pez
+  tigre:
+    tags:
+    - mamifero
+    - cola larga
+    - felino
+    - rayas
+    - carnivoro
+  tortuga:
+    tags:
+    - patas
+    - caparazon
+    - reptil
+  vaca:
+    tags:
+    - mamifero
+    - muge
+    - cola larga
+    - rumiante
+    - cuernos
+    - da leche
+    - domestico
 tags:
 - mamifero
 - crustaceo
