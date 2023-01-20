@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Anikator Window</string>
   </property>
   <property name="animated">
    <bool>true</bool>
@@ -95,6 +95,12 @@
      <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuAnikator">
+    <property name="title">
+     <string>Anikator</string>
+    </property>
+   </widget>
+   <addaction name="menuAnikator"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

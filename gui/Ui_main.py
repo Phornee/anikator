@@ -39,18 +39,22 @@ class Ui_MainWindow(object):
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 755, 26))
         self.menubar.setObjectName("menubar")
+        self.menuAnikator = QtWidgets.QMenu(self.menubar)
+        self.menuAnikator.setObjectName("menuAnikator")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.menubar.addAction(self.menuAnikator.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Anikator Window"))
         self.output_label.setText(_translate("MainWindow", "---"))
         self.si.setText(_translate("MainWindow", "Si"))
         self.no.setText(_translate("MainWindow", "No"))
         self.candidates_label.setText(_translate("MainWindow", "Candidates"))
+        self.menuAnikator.setTitle(_translate("MainWindow", "Anikator"))
