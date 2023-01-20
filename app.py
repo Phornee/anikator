@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.uic import loadUi
 
-from gui.main_ui import Ui_MainWindow
+from gui.Ui_main import Ui_MainWindow
 
 
 class Window(QMainWindow, Ui_MainWindow):
