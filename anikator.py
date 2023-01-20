@@ -1,6 +1,5 @@
 import copy
 import yaml
-import random
 import shutil
 from yaml.loader import SafeLoader
 
@@ -18,7 +17,9 @@ def calc_best_tag(current_animals: list):
     dist_half = 100000
     tag_selected = 'unknown'
     half = len(current_animals) / 2
+    print("Remaining animals/2: {}".format(half))
     for key, value in tag_count.items():
+        print("tag {}, #{}".format(key, value))
         if abs(value - half) < dist_half:
             tag_selected = key
             dist_half = abs(value - half)
@@ -59,12 +60,12 @@ while tag != '':
     if has_tag:
         positive_tags.add(tag)
 
-    # Discard all the animals that don´t fulfil the condition with a comprehension dictionary
+    # Discard all the animals that don´t fulfill the condition with a comprehension dictionary
     current = {key: value for key, value in current.items() if (tag in value['tags']) == has_tag}
 
-    # If only one fulfils, we have our guess!
+    # If only one fulfills, we have our guess!
     if len(current) == 1:
-        animal_guessed = list(current.keys())[0]
+        animal_guessed = list(current.keys())[0]  # change to next(iter(current)) ???
         guessed = yes_or_no("Tu animal es {}".format(animal_guessed))
         tag = ''
     else:  # If more than one fulfils, we need to ask more questions
