@@ -7,19 +7,40 @@ import shutil
 import yaml
 from yaml.loader import SafeLoader
 
-
 class Anikator():
-
-    def calc_best_tag(current_animals: list):
-    """ Calculate the best tag to ask the next
-        For this, we will calculat which tag splits the remaining candidates
-        in two groups, the most balanced possible
-    Args:
-        current_animals (list): list of animals still candidates
-
-    Returns:
-        string: tag that splits the candidates in most balance way
+    """ Class to guess animals and learn from users
     """
+    def __init__(self, database_path):
+        with open(database_path, 'r') as ff:
+            self._database_path = database_path
+            self._database = yaml.load(ff, Loader=SafeLoader)
+
+            # transform tags into sets
+            for key, value in self._database['animals'].items():
+                value['tags'] = set(value['tags'])
+
+    def save_knowledge(self):
+        shutil.copy('./anikator/database.yml', './anikator/database_bck.yml')
+
+        with open(self._database_path, 'w') as ff:
+            # transform tags back into lists, so that yaml.dump works properly
+            database_output = copy.deepcopy(self._database)
+            for key, value in database_output['animals'].items():
+                value['tags'] = list(value['tags'])
+
+            output = yaml.dump(database_output)
+            ff.write(output)
+
+    def calc_best_tag(self, current_animals: list):
+        """ Calculate the best tag to ask the next
+            For this, we will calculat which tag splits the remaining candidates
+            in two groups, the most balanced possible
+        Args:
+            current_animals (list): list of animals still candidates
+
+        Returns:
+            string: tag that splits the candidates in most balance way
+        """
         # Count the number of uses of each tag
         tag_count = {}
         for _, animal in current_animals.items():
@@ -41,7 +62,7 @@ class Anikator():
 
         return tag_selected
 
-    def yes_or_no(question):
+    def yes_or_no(self, question):
         while True:
             answer = input(f"{question} (s/n)?").lower().strip()
             if answer in ('s', 'n'):
@@ -50,26 +71,19 @@ class Anikator():
 
         return answer == 's'
 
-if __name__ == "__main__":
-        with open('./anikator/database.yml', 'r') as ff:
-            database = yaml.load(ff, Loader=SafeLoader)
-
-        animals = database['animals']
-        tags = database['tags']
-
-        # transform tags into sets
-        for key, value in animals.items():
-            value['tags'] = set(value['tags'])
+    def guess(self):
+        animals = self._database['animals']
+        tags = self._database['tags']
 
         input("Hola! Piensa en un animal, y lo voy a intentar adivinar. Pulsa [ENTER] para continuar.")
 
         candidates = copy.deepcopy(animals)
 
-        tag = calc_best_tag(candidates)
+        tag = self.calc_best_tag(candidates)
         positive_tags = set()
 
         while tag != '':
-            has_tag = yes_or_no(f"Tu animal tiene la caracteristica: {tag}")
+            has_tag = self.yes_or_no(f"Tu animal tiene la caracteristica: {tag}")
 
             if has_tag:
                 positive_tags.add(tag)
@@ -81,17 +95,17 @@ if __name__ == "__main__":
             # If only one fulfills, we have our guess!
             if len(candidates) == 1:
                 animal_guessed = list(candidates.keys())[0]  # change to next(iter(current)) ???
-                guessed = yes_or_no(f"Tu animal es {animal_guessed}")
+                guessed = self.yes_or_no(f"Tu animal es {animal_guessed}")
                 tag = ''
             else:  # If more than one fulfils, we need to ask more questions
-                tag = calc_best_tag(candidates)
+                tag = self.calc_best_tag(candidates)
 
-    if guessed:
-        print("Soy la polla!")
-    else:
-        user_animal_name = input("Cual era el animal en que estabas pensando?")
-        differ_tag = input(f"Dime una caracteristica que me ayude a diferenciar entre {user_animal_name} y {animal_guessed}.")
-        user_animal_has_tag = yes_or_no(f"{user_animal_name} tiene la caracteristica {differ_tag}")
+        if guessed:
+            print("Soy la polla!")
+        else:
+            user_animal_name = input("Cual era el animal en que estabas pensando?")
+            differ_tag = input(f"Dime una caracteristica que me ayude a diferenciar entre {user_animal_name} y {animal_guessed}.")
+            user_animal_has_tag = self.yes_or_no(f"{user_animal_name} tiene la caracteristica {differ_tag}")
 
             if differ_tag not in tags:
                 tags.append(differ_tag)
@@ -106,12 +120,7 @@ if __name__ == "__main__":
 
             animals[user_animal_name]['tags'].update(positive_tags)
 
-            shutil.copy('./anikator/database.yml', './anikator/database_bck.yml')
-
-            with open('./anikator/database.yml', 'w') as ff:
-                # transform tags back into lists, so that yaml.dump works properly
-                for key, value in animals.items():
-                    value['tags'] = list(value['tags'])
-
-            output = yaml.dump(database)
-            ff.write(output)
+if __name__ == "__main__":
+    anikator = Anikator('./anikator/database.yml')
+    anikator.guess()
+    anikator.save_knowledge()
