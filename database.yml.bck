@@ -5,8 +5,8 @@ animals:
   ballena:
     tags:
     - vive en el mar
-    - grande
     - mamifero
+    - grande
   caballito de mar:
     tags:
     - pez
@@ -19,20 +19,20 @@ animals:
   cabra:
     tags:
     - bala
-    - cuernos
-    - domestico
     - da leche
-    - rumiante
     - mamifero
+    - domestico
+    - cuernos
+    - rumiante
   cangrejo:
     tags:
+    - camina de lado
     - crustaceo
     - pinzas
-    - camina de lado
   canguro:
     tags:
-    - cola larga
     - bolsa marsupial
+    - cola larga
     - mamifero
   caracol:
     tags:
@@ -41,8 +41,8 @@ animals:
   cebra:
     tags:
     - cola larga
-    - herbivoro
     - mamifero
+    - herbivoro
     - rayas
   cerdo:
     tags:
@@ -54,27 +54,23 @@ animals:
     - reptil
   conejo:
     tags:
-    - mamifero
     - orejas largas
+    - mamifero
   delfin:
     tags:
     - vive en el mar
     - mamifero
-  gallina:
-    tags:
-    - ave
-    - "peque\xF1o"
   gamba:
     tags:
     - crustaceo
   gato:
     tags:
-    - cola larga
+    - "peque\xF1o"
     - mamifero
-    - felino
     - maulla
     - domestico
-    - "peque\xF1o"
+    - felino
+    - cola larga
   hormiga:
     tags:
     - insecto
@@ -85,12 +81,12 @@ animals:
   jirafa:
     tags:
     - cola larga
-    - cuello largo
     - mamifero
+    - cuello largo
   koala:
     tags:
-    - mamifero
     - trepa
+    - mamifero
   lagartija:
     tags:
     - patas
@@ -102,26 +98,26 @@ animals:
     - grande
   leon:
     tags:
-    - cola larga
-    - felino
-    - melena
     - carnivoro
+    - melena
     - mamifero
+    - felino
+    - cola larga
   mariposa:
     tags:
     - alas
     - insecto
   mono:
     tags:
+    - trepa
     - cola larga
     - mamifero
-    - trepa
   "musara\xF1a":
     tags:
-    - cola larga
     - carnivoro
     - mamifero
     - "peque\xF1o"
+    - cola larga
   ornitorrinco:
     tags:
     - pico
@@ -129,10 +125,10 @@ animals:
   oveja:
     tags:
     - bala
+    - mamifero
     - lana
     - domestico
     - rumiante
-    - mamifero
   pajaro carpintero:
     tags:
     - vuela
@@ -145,15 +141,15 @@ animals:
     - ave
   pelicano:
     tags:
+    - bolsa pico
     - nada
     - vuela
     - ave
-    - bolsa pico
   perro:
     tags:
     - mamifero
-    - domestico
     - ladra
+    - domestico
   rana:
     tags:
     - anfibio
@@ -164,12 +160,12 @@ animals:
     - "peque\xF1o"
   rinoceronte:
     tags:
-    - cuernos
     - mamifero
+    - cuernos
   salamandra:
     tags:
-    - cola
     - anfibio
+    - cola
   serpiente:
     tags:
     - reptil
@@ -178,11 +174,11 @@ animals:
     - pez
   tigre:
     tags:
-    - rayas
-    - cola larga
-    - felino
     - carnivoro
+    - rayas
     - mamifero
+    - felino
+    - cola larga
   tortuga:
     tags:
     - patas
@@ -190,13 +186,13 @@ animals:
     - caparazon
   vaca:
     tags:
-    - cola larga
-    - muge
-    - cuernos
-    - domestico
     - da leche
-    - rumiante
+    - muge
     - mamifero
+    - domestico
+    - cola larga
+    - cuernos
+    - rumiante
 tags:
 - mamifero
 - crustaceo

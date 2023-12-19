@@ -11,21 +11,21 @@ class Anikator():
     """ Class to guess animals and learn from users
     """
     def __init__(self, database_path):
-        with open(database_path, 'r') as ff:
+        with open(database_path, 'r', encoding="utf-8") as ff:
             self._database_path = database_path
             self._database = yaml.load(ff, Loader=SafeLoader)
 
             # transform tags into sets
-            for key, value in self._database['animals'].items():
+            for _, value in self._database['animals'].items():
                 value['tags'] = set(value['tags'])
 
     def save_knowledge(self):
-        shutil.copy('./anikator/database.yml', './anikator/database_bck.yml')
+        shutil.copy(self._database_path, f'{self._database_path}.bck')
 
-        with open(self._database_path, 'w') as ff:
+        with open(self._database_path, 'w', encoding="utf-8") as ff:
             # transform tags back into lists, so that yaml.dump works properly
             database_output = copy.deepcopy(self._database)
-            for key, value in database_output['animals'].items():
+            for _, value in database_output['animals'].items():
                 value['tags'] = list(value['tags'])
 
             output = yaml.dump(database_output)
@@ -75,7 +75,8 @@ class Anikator():
         animals = self._database['animals']
         tags = self._database['tags']
 
-        input("Hola! Piensa en un animal, y lo voy a intentar adivinar. Pulsa [ENTER] para continuar.")
+        input("Hola! Piensa en un animal, y lo voy a intentar adivinar. Pulsa"\
+              " [ENTER] para continuar.")
 
         candidates = copy.deepcopy(animals)
 
@@ -88,7 +89,7 @@ class Anikator():
             if has_tag:
                 positive_tags.add(tag)
 
-            # Discard all the animals that don´t fulfill the condition with a comprehension dictionary
+            # Discard all the animals that don´t fulfill the condition
             candidates = {key: value for key, value in candidates.items()
                             if (tag in value['tags']) == has_tag}
 
