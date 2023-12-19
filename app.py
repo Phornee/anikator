@@ -1,7 +1,7 @@
 import sys
 
 from PyQt5.QtWidgets import (
-    QApplication, QDialog, QMainWindow, QMessageBox
+    QApplication, QDialog, QMainWindow, QMessageBox, QWidget
 )
 from PyQt5.uic import loadUi
 
@@ -17,28 +17,17 @@ class Window(QMainWindow, Ui_MainWindow):
         # self.stats_list = [9, 9, 9, 9, 9, 9]
 
         # self.str_stat.set_name("STR")
-        # self.con_stat.set_name("CON")
-        # self.dex_stat.set_name("DEX")
-        # self.int_stat.set_name("INT")
-        # self.wis_stat.set_name("WIS")
-        # self.cha_stat.set_name("CHA")
 
         # # Populate "classes" combobox
         # self.classes.addItem('war')
-        # self.classes.addItem('pal')
-        # self.classes.addItem('ran')
-        # self.classes.addItem('mag')
-        # self.classes.addItem('cle')
-        # self.classes.addItem('dru')
-        # self.classes.addItem('thi')
-        # self.classes.addItem('bar')
 
-        # # Populate "races" combobox
-        # self.races.addItem('hum')
-        # self.races.addItem('elf')
-        # self.races.addItem('dwa')
+    def introContinue(self):
+        tab_questions = self.mainTab.findChild(QWidget, 'questions_tab')
+        self.mainTab.setCurrentWidget(tab_questions)
+        pass
 
     def connectSignalsSlots(self):
+        self.intro_button_continue.clicked.connect(self.introContinue)
         # self.action_Exit.triggered.connect(self.close)
         # self.action_Find_Replace.triggered.connect(self.findAndReplace)
         # self.action_About.triggered.connect(self.about)
